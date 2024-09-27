@@ -7,16 +7,16 @@
 
 public class Hex {
     static func convert(hex: String, hex_to_int_flag: Bool) -> Array<Int> {
-        var arr: [Int] = [];
+        var arr: Array<Int> = [];
         
         for char in hex {
-            arr.append(hex_to_int[char]!);
+            arr.append(hex_to_int[char]!)
         }
         
-        return arr;
+        return arr
     }
     
-    static func sum(a: String, b: String, c: String) {
-        var _ : String;
+    static func sum(a: String, b: String) {
+        var _ : String
     }
 }

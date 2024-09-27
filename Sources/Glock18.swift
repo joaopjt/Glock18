@@ -8,7 +8,17 @@ import ArgumentParser
 
 @main
 struct Glock18: ParsableCommand {
+    @Argument(help: "Command to run (parse/generate).")
+    var command: String = ""
+    
+    @Argument(help: "word to parse/generate")
+    var word: String = ""
+    
     mutating func run() throws {
-        print("Hello, world!")
+        if command == "parse" {
+            var _ = Parse(word: word)
+        } else {
+            var _ = Generate(hex: word)
+        }
     }
 }
